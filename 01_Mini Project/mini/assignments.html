@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignments - Virtual Classroom</title>
+    <link rel="stylesheet" href="assignments.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="logo">Virtual Classroom</div>
+        <nav class="nav-links">
+            <a href="dash.html">Dashboard</a>
+                       <a href="landing.html">Courses</a>
+            <a href="assignments.html">Assignments</a>
+            <a href="settings.html">Profile</a>
+            <a href="#logout">Logout</a>
+        </nav>
+    </header>
+
+    <!-- Main Content Area -->
+    <div class="main-content">
+        <h2>Assignments</h2>
+        <div class="assignment-section">
+            <h3>Uploaded Assignments</h3>
+            <ul id="uploaded-assignments">
+                <!-- Assignment list will be populated by JavaScript -->
+            </ul>
+        </div>
+
+        <div class="upload-section">
+            <h3>Upload New Assignment</h3>
+            <input type="file" id="fileInput">
+            <button onclick="uploadAssignment()">Upload</button>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>© 2024 AIKTC VIRTUAL CLASSROOM. All rights reserved.</p>
+    </footer>
+
+    <script src="assignments.js"></script>
+</body>
+</html>

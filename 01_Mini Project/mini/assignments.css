@@ -1,0 +1,206 @@
+/* General Body Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f8f7;
+    color: #264653;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header Styles */
+.header {
+    background-color: #2a9d8f;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    box-sizing: border-box;
+}
+
+.header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.nav-links a:hover {
+    background-color: #21867a;
+    color: #e9c46a;
+}
+
+.logout-btn {
+    background-color: #e76f51;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.logout-btn:hover {
+    background-color: #d65a50;
+    color: #e9c46a;
+}
+
+/* Main Content Styles */
+.main-content {
+    padding: 20px;
+    flex: 1;
+    margin-top: 60px;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+.main-content h2 {
+    margin-top: 0;
+    color: #2a9d8f;
+    text-align: center;
+    font-size: 2em;
+    position: relative;
+    overflow: hidden;
+}
+
+.main-content h2::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #2a9d8f;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform 0.5s ease;
+}
+
+.main-content h2:hover::after {
+    transform: scaleX(1);
+}
+
+.assignment-section {
+    margin-bottom: 30px;
+}
+
+.assignment-section ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.assignment-section li {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    flex: 1 1 calc(48% - 10px);
+    margin-right: 10px;
+}
+
+.assignment-section li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: #87ceeb; /* Smooth transition to blue color */
+}
+
+/* Upload Section */
+.upload-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    background-color: #e6f7f5;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.upload-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: #d7f2ee;
+}
+
+.upload-section input[type="file"] {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 2px dashed #2a9d8f;
+    border-radius: 5px;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+    background-color: #f4f8f7;
+}
+
+.upload-section input[type="file"]:hover {
+    border-color: #21867a;
+    background-color: #e6f7f5;
+}
+
+.upload-section button {
+    background-color: #2a9d8f;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.upload-section button:hover {
+    background-color: #21867a;
+    transform: translateY(-2px);
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #264653;
+    color: white;
+    text-align: center;
+    padding: 15px 20px;
+    border-top: 1px solid #c8e6e2;
+    margin-top: auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Animation for fading in content */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

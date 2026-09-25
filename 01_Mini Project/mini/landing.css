@@ -1,0 +1,339 @@
+/* General Body Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f8f7;
+    color: #264653;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures body takes full viewport height */
+}
+
+/* Header Styles */
+.header {
+    background-color: #2a9d8f;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s ease;
+}
+
+/* Header Hover Effect */
+.header:hover {
+    background-color: #21867a; /* Change header background on hover */
+}
+
+/* Header Elements Animation */
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: skewX(-20deg);
+    transition: transform 0.5s ease-in-out;
+    z-index: 0; /* Make sure it’s behind the content */
+}
+
+.header:hover::before {
+    transform: translateX(100%) skewX(-20deg);
+}
+
+.header .logo,
+.nav-links {
+    position: relative; /* Ensure elements are on top of the swipe effect */
+    z-index: 1;
+}
+
+.header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center; /* Aligns items vertically centered */
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #e9c46a;
+}
+
+/* Logout Button Container */
+.logout-container {
+    position: relative;
+    display: flex;
+    align-items: center; /* Ensures button aligns vertically */
+}
+
+/* Logout Button Styles */
+.logout-btn {
+    background-color: #e9c46a;
+    color: #264653;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 20px; /* Ensures spacing from other nav items */
+}
+
+.logout-btn:hover {
+    background-color: #d4a257;
+}
+
+/* Dropdown Menu Styles */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #ffffff;
+    border: 1px solid #c8e6e2;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    min-width: 200px;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.dropdown-menu.show {
+    display: block;
+}
+
+.account-details {
+    padding: 10px;
+    border-bottom: 1px solid #c8e6e2;
+    margin-bottom: 10px;
+}
+
+.account-details p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px;
+    color: #264653;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-menu a:hover {
+    background-color: #e6f7f5;
+}
+
+/* Content Wrapper */
+.content-wrapper {
+    display: flex;
+    flex: 1; /* Makes this section take up remaining space */
+    min-height: 80vh;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 250px;
+    background-color: #e6f7f5;
+    padding: 20px;
+    border-right: 1px solid #c8e6e2;
+}
+
+.sidebar h3 {
+    margin-top: 0;
+    color: #2a9d8f;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.sidebar h3:hover {
+    color: #21867a;
+}
+
+.course-list {
+    list-style: none;
+    padding: 0;
+    display: block; /* Initially visible */
+}
+
+.course-list li {
+    margin-bottom: 15px;
+}
+
+.course-list a {
+    color: #264653;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.course-list a:hover {
+    color: #2a9d8f;
+}
+
+/* Main Content Styles */
+.main-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.main-content h2 {
+    margin-top: 0;
+}
+
+.assignment-card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: box-shadow 0.3s ease;
+}
+
+.assignment-card h3 {
+    margin-top: 0;
+    color: #2a9d8f;
+}
+
+.assignment-card button {
+    background-color: #2a9d8f;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.assignment-card button:hover {
+    background-color: #21867a;
+}/* Main Content Styles */
+.main-content {
+    flex: 1;
+    padding: 20px;
+    position: relative; /* Ensure positioning context for child elements */
+}
+
+.image-container {
+    position: relative; /* Positioning context for the overlay effect */
+    overflow: hidden; /* Ensures that the blurred area does not overflow */
+    margin-top: 20px; /* Spacing from other content */
+}
+
+.image-container img {
+    width: 100%; /* Adjust width as needed */
+    height: auto;
+    transition: transform 0.5s ease, filter 0.5s ease; /* Smooth transition for blur effect */
+}
+
+.image-container:hover img {
+    filter: blur(8px); /* Blur effect on hover */
+    transform: scale(1.1); /* Optional: slightly zoom in effect */
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #2a9d8f;
+    color: white;
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 1px solid #264653;
+    transition: background-color 0.3s ease, padding 0.3s ease;
+}
+
+.footer:hover {
+    background-color: #21867a;
+}
+
+/* Quick Links */
+.footer .quick-links {
+    margin-bottom: 15px;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer .quick-links li {
+    margin: 0 10px;
+}
+
+.footer .quick-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer .quick-links a:hover {
+    color: #e9c46a;
+}
+
+/* Contact Information */
+.footer .contact-info {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.footer .contact-info p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+/* Subscribe Form */
+.footer .subscribe-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer .subscribe-form input[type="email"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 250px;
+    transition: background-color 0.3s ease;
+}
+
+.footer .subscribe-form input[type="email"]:focus {
+    background-color: #e6f7f5;
+    outline: none;
+}
+
+.footer .subscribe-form button {
+    background-color: #e9c46a;
+    color: #264653;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.footer .subscribe-form button:hover {
+    background-color: #d4a257;
+}
+
+/* Copyright Information */
+.footer .copyright {
+    margin-top: 15px;
+    font-size: 12px;
+    text-align: center;
+}
+

@@ -1,0 +1,248 @@
+/* General Body Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f8f7;
+    color: #264653;
+}
+
+/* Header Styles */
+.header {
+    background-color: #2a9d8f;
+    color: white;
+    padding: 15px 20px; /* Reduced padding for better fit */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    box-sizing: border-box; /* Includes padding in the total width */
+}
+
+.header .logo {
+    font-size: 24px; /* Adjusted font size for better fit */
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px; /* Reduced margin for better fit */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #e9c46a;
+    transform: translateY(-3px);
+}
+
+.logout-btn {
+    background-color: #e76f51;
+    padding: 8px 16px; /* Adjusted padding for better fit */
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-left: 15px; /* Ensure spacing from other elements */
+}
+
+.logout-btn:hover {
+    background-color: #d65a50;
+    transform: translateY(-2px);
+}
+
+
+/* Dashboard Wrapper */
+.dashboard-wrapper {
+    display: flex;
+    margin-top: 70px; /* Adjust based on header height */
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 250px;
+    background-color: #e6f7f5;
+    padding: 20px;
+    border-right: 1px solid #c8e6e2;
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar h3 {
+    margin-top: 0;
+    color: #2a9d8f;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.sidebar h3:hover {
+    color: #21867a;
+}
+
+.dashboard-links {
+    list-style: none;
+    padding: 0;
+}
+
+.dashboard-links li {
+    margin-bottom: 15px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.dashboard-links a {
+    color: #264653;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.dashboard-links a:hover {
+    color: #2a9d8f;
+    transform: translateX(5px);
+}
+
+.dashboard-links li:hover {
+    background-color: #dcebe9;
+    border-radius: 5px;
+    transform: scale(1.02);
+}
+
+/* Main Content Styles */
+.main-content {
+    flex: 1;
+    padding: 20px;
+    transition: opacity 0.3s ease;
+}
+
+/* Course Cards */
+.course-summary {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.course-card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    flex: 1 1 45%;
+    transition: box-shadow 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+    text-align: center;
+}
+
+.course-card:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+    background-color: #e9c46a; /* Accent color on hover */
+}
+
+.course-card h3 {
+    margin: 0 0 10px 0;
+    color: #264653;
+}
+
+.course-card p {
+    margin: 0;
+}
+
+/* Assignment Cards */
+.assignment-summary {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.assignment-card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    flex: 1 1 45%;
+    transition: box-shadow 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+    text-align: center;
+}
+
+.assignment-card:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+    background-color: #e9c46a; /* Accent color on hover */
+}
+
+.assignment-card h3 {
+    margin: 0 0 10px 0;
+    color: #264653;
+}
+
+.assignment-card p {
+    margin: 0;
+}
+
+/* Notification Cards */
+.notification-card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+}
+
+.notification-card:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+    background-color: #e9c46a; /* Accent color on hover */
+}
+
+.notification-card h3 {
+    margin: 0 0 10px 0;
+    color: #264653;
+}
+
+.notification-card p {
+    margin: 0;
+}
+
+/* Settings Cards */
+.settings-card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.settings-card button {
+    background-color: #2a9d8f;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.settings-card button:hover {
+    background-color: #21867a;
+    transform: scale(1.05);
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #264653;
+    color: white;
+    text-align: center;
+    padding: 15px 20px;
+    border-top: 1px solid #c8e6e2;
+    margin-top: auto; /* Pushes the footer to the bottom of the page */
+}

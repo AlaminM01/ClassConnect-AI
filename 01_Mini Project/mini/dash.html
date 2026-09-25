@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Classroom Dashboard</title>
+    <link rel="stylesheet" href="dash.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="logo">Virtual Classroom</div>
+        <nav class="nav-links">
+            <a href="#dashboard">Dashboard</a>
+            <a href="landing.html">Courses</a>
+            <a href="#assignments">Assignments</a>
+     
+            <a href="settings.html">Settings</a>
+            <a href="#logout" class="logout-btn">Logout</a>
+        </nav>
+    </header>
+
+    <!-- Dashboard Content -->
+    <div class="dashboard-wrapper">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <h3>Dashboard Overview</h3>
+            <ul class="dashboard-links">
+                <li><a href="#course-overview">Course Overview</a></li>
+                <li><a href="#assignments">Assignments</a></li>
+                <li><a href="#notifications">Notifications</a></li>
+                <li><a href="#settings">Settings</a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <section id="course-overview">
+                <h2>Course Overview</h2>
+                <div class="course-summary">
+                    <div class="course-card">
+                        <h3>Course 1</h3>
+                        <p>Progress: 75%</p>
+                        <p>Upcoming Deadline: Aug 20, 2024</p>
+                        <p>Recent Activity: Completed quiz</p>
+                    </div>
+                    <div class="course-card">
+                        <h3>Course 2</h3>
+                        <p>Progress: 50%</p>
+                        <p>Upcoming Deadline: Aug 25, 2024</p>
+                        <p>Recent Activity: Submitted assignment</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="assignments">
+                <h2>Assignments and Grades</h2>
+                <div class="assignment-summary">
+                    <div class="assignment-card">
+                        <h3>Assignment 1</h3>
+                        <p>Grade: A</p>
+                        <p>Due Date: Aug 18, 2024</p>
+                    </div>
+                    <div class="assignment-card">
+                        <h3>Assignment 2</h3>
+                        <p>Grade: B+</p>
+                        <p>Due Date: Aug 22, 2024</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="notifications">
+                <h2>Notifications</h2>
+                <div class="notification-card">
+                    <h3>New Announcement</h3>
+                    <p>Your course materials have been updated.</p>
+                </div>
+                <div class="notification-card">
+                    <h3>Upcoming Exam</h3>
+                    <p>Don't forget your exam on Aug 30, 2024.</p>
+                </div>
+            </section>
+
+            <section id="settings">
+    <h2>Settings</h2>
+    <div class="settings-card">
+        <h3>Profile</h3>
+        <!-- Redirects to settings.html when clicked -->
+        <button onclick="window.location.href='settings.html'">Update Profile</button>
+    </div>
+    <div class="settings-card">
+        <h3>Preferences</h3>
+        <!-- Correcting the Preferences button to also redirect -->
+        <button onclick="window.location.href='settings.html'">Update Preferences</button>
+    </div>
+</section>
+
+        </main>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>© 2024 AIKTC VIRTUAL CLASSROOM. All rights reserved.</p>
+    </footer>
+
+    <script src="dash.js"></script>
+</body>
+</html>

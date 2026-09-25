@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Classroom</title>
+    <link rel="stylesheet" href="landing.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="logo">Virtual Classroom</div>
+        <nav class="nav-links">
+            <a href="dash.html">Dashboard</a>
+            
+            <a href="#courses">Courses</a>
+            <a href="assignments.html">Assignments</a>
+            <a href="#profile">Profile</a>
+            <!-- Logout Button with Dropdown -->
+            <div class="logout-container">
+                <button class="logout-btn" id="logout-btn">Logout</button>
+                <div class="dropdown-menu" id="dropdown-menu">
+                    <div class="account-details">
+                        <p>User: John Doe</p>
+                        <p>Email: john.doe@example.com</p>
+                    </div>
+                    <a href="#" id="account-details">Account Details</a>
+                    <a href="#" id="settings">Settings</a>
+                    <a href="#" id="sign-out">Sign Out</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Sidebar and Main Content -->
+    <div class="content-wrapper">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <h3 onclick="toggleCourses()">Your Courses</h3>
+            <ul class="course-list" id="course-list">
+                <li><a href="#" onclick="showCourseContent('course1')">Course 1</a></li>
+                <li><a href="#" onclick="showCourseContent('course2')">Course 2</a></li>
+                <li><a href="#" onclick="showCourseContent('course3')">Course 3</a></li>
+                <li><a href="#" onclick="showCourseContent('course4')">Course 4</a></li>
+            </ul>
+        </aside>
+
+
+
+        <!-- Main Content Area -->
+        <main class="main-content" id="main-content">
+    <h2>Welcome to Virtual Classroom</h2>
+    <p>Select a course from the sidebar to get started.</p>
+    <div id="course-content"></div>
+    <!-- Image with Blur Effect -->
+    <div class="image-container">
+        <! img src="C:\mini\image\home.jpg" alt="Virtual Classroom Image" !>
+    </div>
+</main>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <ul class="quick-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+        </ul>
+        <div class="contact-info">
+            <p>Email: info@example.com</p>
+            <p>Phone: +123 456 7890</p>
+        </div>
+        <div class="subscribe-form">
+            <input type="email" placeholder="Subscribe to our newsletter">
+            <button>Subscribe</button>
+        </div>
+        <div class="copyright">
+            &copy; 2024 AIKTC VIRTUAL CLASSROOM. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="landing.js"></script>
+</body>
+</html>
