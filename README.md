@@ -3,13 +3,33 @@
 > **The Next-Generation AI-Powered Virtual Classroom & Learning Ecosystem**  
 > Combining the pedagogy of Google Classroom, the structure of Notion, the mastery of Coursera, the gamification of Duolingo, and the intelligence of ChatGPT into a unified modern SaaS platform.
 
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-class--connect--ai.vercel.app-00dfa2?style=for-the-badge&logo=vercel&logoColor=white)](https://class-connect-ai.vercel.app/)
 [![Next.js 15](https://img.shields.io/badge/Next.js-15.5-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-CSS-38B2AC?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
 [![Prisma ORM](https://img.shields.io/badge/Prisma-6.4-2D3748?style=for-the-badge&logo=prisma)](https://www.prisma.io/)
-[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-336791?style=for-the-badge&logo=postgresql)](https://www.postgresql.org/)
 [![Google Gemini](https://img.shields.io/badge/AI-Google%20Gemini-orange?style=for-the-badge&logo=google)](https://ai.google.dev/)
-[![Deploy with Vercel](https://img.shields.io/badge/Deploy-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/new/clone?repository-url=https://github.com/AlaminM01/ClassConnect-AI)
+[![GitHub](https://img.shields.io/badge/GitHub-AlaminM01%2FClassConnect--AI-181717?style=for-the-badge&logo=github)](https://github.com/AlaminM01/ClassConnect-AI)
+
+---
+
+## 🌐 Live Production Application
+
+🚀 **Live Deployment URL**: **[https://class-connect-ai.vercel.app/](https://class-connect-ai.vercel.app/)**
+
+### 🎯 Instant Workspace Links
+- 🏠 **Landing Page**: [https://class-connect-ai.vercel.app/](https://class-connect-ai.vercel.app/)
+- 🎓 **Student Command Center**: [https://class-connect-ai.vercel.app/student](https://class-connect-ai.vercel.app/student)
+- 🤖 **24/7 Socratic AI Tutor**: [https://class-connect-ai.vercel.app/student/ai-tutor](https://class-connect-ai.vercel.app/student/ai-tutor)
+- 📝 **Notion-Grade AI Notes**: [https://class-connect-ai.vercel.app/student/notes](https://class-connect-ai.vercel.app/student/notes)
+- ⚡ **Adaptive AI Quizzes**: [https://class-connect-ai.vercel.app/student/quiz](https://class-connect-ai.vercel.app/student/quiz)
+- 🗂️ **3D Active-Recall Flashcards**: [https://class-connect-ai.vercel.app/student/flashcards](https://class-connect-ai.vercel.app/student/flashcards)
+- 🏆 **Gamification Hub & Leaderboard**: [https://class-connect-ai.vercel.app/student/gamification](https://class-connect-ai.vercel.app/student/gamification)
+- 📈 **Student Study Analytics**: [https://class-connect-ai.vercel.app/student/analytics](https://class-connect-ai.vercel.app/student/analytics)
+- 🧑‍🏫 **Faculty Management Studio**: [https://class-connect-ai.vercel.app/teacher](https://class-connect-ai.vercel.app/teacher)
+- 📊 **Faculty Cohort Diagnostics**: [https://class-connect-ai.vercel.app/teacher/analytics](https://class-connect-ai.vercel.app/teacher/analytics)
+
+> 💡 **Role Switcher Tip**: The application includes built-in role switching. Click on your profile avatar in the navigation bar to toggle between **Student**, **Teacher**, and **Administrator** roles instantly without requiring new logins!
 
 ---
 
@@ -67,7 +87,8 @@ classconnect-ai/
 │       ├── types.ts          # Type-safe domain contracts
 │       └── utils.ts          # Styling & formatting utilities
 ├── tests/                    # Automated Node test runner suite
-└── vercel.json               # Production deployment headers & security
+├── vercel.json               # Production deployment headers & security
+└── DEPLOYMENT.md             # Complete Zero-Cost Deployment Guide
 ```
 
 ---
@@ -99,13 +120,13 @@ npm test
 # Start Next.js Development Server
 npm run dev
 ```
-Open [http://localhost:3000](http://localhost:3000) to view the application.
+Open [http://localhost:3000](http://localhost:3000) to view the application locally.
 
 ---
 
 ## 🚀 Development Phases Status
 
-- [x] **Phase 1**: Requirements analysis, architecture design, Prisma schema, project setup & landing page.
+- [x] **Phase 1**: Requirements analysis, architecture design, Prisma schema, project setup & SaaS landing page.
 - [x] **Phase 2**: Authentication & multi-role session management (Student, Teacher, Admin).
 - [x] **Phase 3**: Student command center & study dashboard with streak widgets and enrolled courses.
 - [x] **Phase 4**: Teacher management studio, course studio, and grading queue.
@@ -117,4 +138,4 @@ Open [http://localhost:3000](http://localhost:3000) to view the application.
 - [x] **Phase 10**: Deep learning analytics, weekly study velocity chart, and teacher cohort grade curves.
 - [x] **Phase 11**: Mobile UX optimization, touch targets, and responsive bottom navigation bar.
 - [x] **Phase 12**: Automated unit tests for gamification calculations, XP formatting, and Socratic AI fallbacks.
-- [x] **Phase 13**: Production deployment configuration, security headers (`vercel.json`), and deployment guide.
+- [x] **Phase 13**: Production deployment configuration, security headers (`vercel.json`), and live Vercel deployment.
