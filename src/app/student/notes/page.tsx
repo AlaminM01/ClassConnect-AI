@@ -5,14 +5,9 @@ import Link from "next/link";
 import {
   FileText,
   Sparkles,
-  BookOpen,
   Copy,
   Check,
-  Download,
-  Plus,
   HelpCircle,
-  Clock,
-  ArrowRight,
   Bookmark,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";

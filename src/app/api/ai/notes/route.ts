@@ -6,7 +6,7 @@ export async function POST(req: NextRequest) {
     const body = await req.json();
     const { topic = "Full-Stack Web Architectures", transcript = "" } = body;
 
-    let noteData = {
+    const noteData = {
       title: `${topic} - Master Study Guide`,
       topic,
       summary: `Comprehensive synthesized review of ${topic}, highlighting architectural design decisions, performance trade-offs, and critical implementation details.`,
