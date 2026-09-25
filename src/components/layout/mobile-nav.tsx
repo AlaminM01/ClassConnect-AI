@@ -8,9 +8,17 @@ import {
   Bot,
   HelpCircle,
   Trophy,
+  LucideIcon,
 } from "lucide-react";
 import { useAuth } from "@/context/auth-context";
 import { cn } from "@/lib/utils";
+
+interface NavTab {
+  name: string;
+  href: string;
+  icon: LucideIcon;
+  isAi?: boolean;
+}
 
 export function MobileNav() {
   const pathname = usePathname();
@@ -18,7 +26,7 @@ export function MobileNav() {
 
   const isTeacher = role === "TEACHER";
 
-  const studentTabs = [
+  const studentTabs: NavTab[] = [
     { name: "Home", href: "/student", icon: LayoutDashboard },
     { name: "Courses", href: "/student/courses", icon: BookOpen },
     { name: "AI Tutor", href: "/student/ai-tutor", icon: Bot, isAi: true },
@@ -26,14 +34,14 @@ export function MobileNav() {
     { name: "XP", href: "/student/gamification", icon: Trophy },
   ];
 
-  const teacherTabs = [
+  const teacherTabs: NavTab[] = [
     { name: "Studio", href: "/teacher", icon: LayoutDashboard },
     { name: "Courses", href: "/teacher/courses", icon: BookOpen },
-    { name: "Grading", href: "/teacher/assignments", icon: HelpCircle },
+    { name: "Grading", href: "/teacher/courses", icon: HelpCircle },
     { name: "Analytics", href: "/teacher/analytics", icon: Trophy },
   ];
 
-  const tabs = isTeacher ? teacherTabs : studentTabs;
+  const tabs: NavTab[] = isTeacher ? teacherTabs : studentTabs;
 
   return (
     <nav className="md:hidden fixed bottom-0 left-0 right-0 z-50 glass-nav border-t border-slate-800/80 px-2 py-1.5 backdrop-blur-2xl">
